@@ -1,0 +1,214 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    box-sizing: border-box;
+  }
+  
+  /* Encabezado */
+  .home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c1c1c;
+    color: white;
+    padding: 20px;
+    width: 100%; /* Asegurar que el header ocupe todo el ancho */
+    box-sizing: border-box;
+  }
+  
+  .logo {
+    flex-grow: 1; /* Ocupa el máximo espacio disponible */
+  }
+  
+  .logo h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    margin-left: 20px;
+  }
+  
+  .navbar ul li a,
+  .navbar ul li button {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .navbar ul li button:hover,
+  .navbar ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Cuerpo principal */
+  main {
+    flex-grow: 1; /* Permitir que el main ocupe el espacio disponible */
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    box-sizing: border-box;
+  }
+  
+  main h2 {
+    font-size: 28px;
+  }
+  
+  main p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .search-form {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column; /* Cambiamos a columna para apilar los elementos */
+    align-items: center; /* Centramos los elementos en el medio */
+    gap: 10px; /* Espaciado entre el input y el botón */
+  }
+  
+  .search-form input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .search-form button {
+    padding: 10px 20px;
+    background-color: #646cff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 150px; /* Aseguramos que el botón no sea muy ancho */
+  }
+  
+  .search-form button:hover {
+    background-color: #535bf2;
+  }
+  
+  
+  /* Footer */
+  .home-footer {
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+  }
+  
+  .home-footer p {
+    margin: 0;
+  }
+
+  /* Barra de búsqueda */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.search-container input[type="text"]:focus {
+  border-color: #646cff;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.search-container button:hover {
+  background-color: #535bf2;
+}
+
+  
+  /* Media Queries para responsividad */
+  @media (max-width: 768px) {
+    .home-header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    .navbar ul li {
+      margin: 10px 0;
+    }
+  
+    main h2 {
+      font-size: 24px;
+    }
+  
+    main p {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home-header {
+      padding: 10px;
+    }
+  
+    .logo h1 {
+      font-size: 20px;
+    }
+  
+    .navbar ul li {
+      margin: 5px 0;
+    }
+  
+    main h2 {
+      font-size: 20px;
+    }
+  
+    main p {
+      font-size: 14px;
+    }
+  }
+  
