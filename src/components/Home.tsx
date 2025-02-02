@@ -10,6 +10,9 @@ const Home: React.FC = () => {
   const [products, setProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string>('');
+  const [errorMessage, setErrorMessage] = useState<string>('');
+  const [showSuccessModal, setShowSuccessModal] = useState<boolean>(false);
   const [favoriteError, setFavoriteError] = useState<string | null>(null); // Error de favoritos
   const navigate = useNavigate(); 
 
@@ -48,12 +51,26 @@ const Home: React.FC = () => {
     };
 
     try {
-      await productService.addProductToFavorites(productData, token); 
-      alert('Producto agregado a favoritos');
-    } catch (error) {
-      setFavoriteError('No se pudo agregar el producto a favoritos.');
+      await productService.addProductToFavorites(productData, token);
+      setSuccessMessage('Producto agregado a favoritos con éxito.');
+      setShowSuccessModal(true);
+      // Ocultar la modal después de 3 segundos
+      setTimeout(() => {
+        setShowSuccessModal(false);
+      }, 3000);
+    }
+    catch (error) {
+      setErrorMessage('No se pudo eliminar el producto de los favoritos.');
     }
   };
+
+  const SuccessModal: React.FC<{ message: string }> = ({ message }) => {
+      return (
+        <div className="success-modal">
+          <p>{message}</p>
+        </div>
+      );
+    };
 
   return (
     <div className="home-container">
@@ -106,7 +123,11 @@ const Home: React.FC = () => {
               </button>
             </div>
           ))}
+          {/* Modal para mostrar el mensaje de éxito */}
+        {showSuccessModal && <SuccessModal message={successMessage} />}
+        {errorMessage && <p className="error">{errorMessage}</p>}
         </div>
+        
       </main>
 
       {/* Footer */}

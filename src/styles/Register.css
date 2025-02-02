@@ -54,14 +54,14 @@
 .user-box input:valid ~ label {
   top: -20px;
   left: 0;
-  color: #03e9f4;
+  color: #4e3aff;
   font-size: 12px;
 }
 
 .submit-btn {
   display: inline-block;
   padding: 10px 20px;
-  color: #03e9f4;
+  color: #4e3aff;
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
@@ -75,10 +75,10 @@
 }
 
 .submit-btn:hover {
-  background: #03e9f4;
+  background: #4e3aff;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+  box-shadow: 0 0 5px #4e3aff, 0 0 25px #4e3aff, 0 0 50px #4e3aff, 0 0 100px #4e3aff;
 }
 
 /* Estilos para el contenedor de redirección de login */
@@ -99,7 +99,7 @@
 .login-redirect a {
   margin-left: 5px;
   font-size: 14px;
-  color: #03e9f4;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }

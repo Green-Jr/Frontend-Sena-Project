@@ -164,6 +164,15 @@
   background-color: #535bf2;
 }
 
+.success {
+  color: green;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
   
   /* Media Queries para responsividad */
   @media (max-width: 768px) {
