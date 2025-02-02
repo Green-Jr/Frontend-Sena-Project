@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Crear la instancia de Axios con la URL base del backend
 const api = axios.create({
-  baseURL: 'https://backend-sena-project.vercel.app',
+  baseURL: 'https://backend-sena-project.vercel.app/api',
   headers: {
     'Content-Type': 'application/json',
   },
